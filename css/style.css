@@ -1,0 +1,329 @@
+#wrapper {
+    display: block;
+    position: relative;
+    background-color: #181515;
+    padding: 100px 80px;
+}
+
+h1 {
+    font-size: 3em;
+    color: #fff;
+    font-family: 'Mali', cursive;
+}
+
+h2 {
+    font-size: 2.4em;
+    color: #ffa500;
+    text-transform: uppercase;
+    font-family: 'Mali', cursive;
+    font-weight: 300;
+    text-align: center;
+}
+
+p, a  {
+    color: #fff;
+    font-family: 'Abel', sans-serif;
+    font-size: 1.125em;
+    text-decoration: none;
+}
+
+a:hover {
+    color:#ffa500; 
+}
+
+header {
+    display: block;
+    width: 100%;
+    text-align: center; 
+}
+
+main {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+.main-block {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+div.items {
+    display: none;    
+}
+
+section.div_items_top {
+    display: grid;
+    grid-template-columns: 26% 26% 24%;
+    grid-column-gap: 8rem;
+    align-items: end;
+    margin-top: 4%;
+}
+
+section.div_items_down {
+    display: grid;
+    grid-template-columns: 25% 25% 34%;
+    grid-template-rows: 32rem;
+    grid-column-gap: 7rem;
+    grid-row-gap: 4rem;
+    align-items: end;
+    margin-top: 4%;
+}
+
+#profile-item {
+    display: block;
+    grid-column: 2;    
+}
+
+#avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    margin-left: 20%;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20%;
+    background-color: #ffa500;
+    border-radius: 50%;
+}
+
+#work-experience-item {
+    grid-column: 1;
+}
+
+#contacts-item {
+    grid-column: 3;
+}
+
+#passions-item {
+    grid-column: 1;
+}
+
+#soft-skills-item { 
+    grid-column: 3;
+}
+
+#languages-item {
+   grid-column: 1;
+}
+
+#sertificates-item {
+    grid-column: 2;
+}
+
+#portfolio-item {  
+    grid-column: 2;
+}
+
+#contacts-item .svg,
+#portfolio-item .svg {
+    width: 36px;
+    height: 36px;
+    margin-right: 14px;  
+}
+
+#work-experience-icon {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 400px;
+}
+
+#notebook-icon {
+    display: block;
+    position: absolute;
+    top: 180px;
+    left: 340px;
+}
+
+#soft-skills-icon {
+    display: block;
+    position: absolute;
+    top: 375px;
+    right: 375px;
+}
+
+#contacts-icon {
+    display: block;
+    position: absolute;
+    top: 250px;
+    right: 375px;
+}
+
+#profile-icon {
+    display: block;
+    position: absolute;
+    top: 100px;
+    right: 375px;
+}
+
+#passions-icon {
+    display: block;
+    position: absolute;
+    top: 175px;
+    left: 210px;
+}
+
+#sertificates-icon {
+    display: block;
+    position: absolute;
+    top: 325px;
+    left: 200px;
+}
+
+#passions-item .svg  {
+    width: 60px;
+    height: 60px;
+}
+
+#passions-item .block:hover p,
+#passions-item .block:hover .svg path,
+#passions-item .block:hover .svg polygon,
+#contacts-item .slice-block:hover a,
+#contacts-item .slice-block:hover .svg path,
+#contacts-item .slice-block:hover .svg polygon {
+    color: #ffa500;
+    fill:#ffa500;
+}
+
+
+
+.svg:hover path, 
+.svg:hover polygon,
+.svg:hover circle  {
+    fill:#ffa500;
+    pointer-events: all;
+    stroke: #ffa500;
+}
+
+
+
+.svg-line {
+    position: absolute;
+    stroke: #fff;
+    stroke-width: 2px;
+    fill: none;
+}
+
+.svg-line path, 
+.svg-line circle {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: offset 2s ease forwards;
+}
+
+@keyframes offset {
+    from{
+        stroke-dashoffset: 500;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.change-color-animation {
+    animation: changeColor 4s linear forwards;
+}
+
+@keyframes changeColor {
+    0% {
+        opacity: 0;
+        stroke: #fff;
+    }
+    75% {
+        opacity: 1;
+        stroke: #ffa500;
+        
+    }
+    
+}
+
+
+.wobble-svg-movingAnimation {
+    animation: wobble-svg 1s ease infinite;
+    animation-play-state:running;
+  }
+  @keyframes wobble-svg {
+    30% { transform: scale(1.1); }
+    40%, 60% { transform: rotate(-8deg); }
+    50% { transform: rotate(8deg) ; }
+    70% { transform: rotate(0deg) ; }
+    
+  }
+
+.wobble-svg-stopAnimation {
+    animation: none;
+    animation-play-state:paused;
+}
+
+#contacts-item .icons, .text,
+#portfolio-item .icons, .text {
+    display: inline-flex;
+}
+
+#languages-item .text {
+    display: inline-block;
+}
+
+#work-experience-item .text,
+#sertificates-item .text {
+    width: 70%;
+}
+
+.block {
+    display: inline-block;
+    width: 25%;
+    margin-right: 5%;
+    margin-top: 5%;
+    text-align: center;
+
+}
+
+.content-block {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 5%;
+}
+
+.slice-block {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    margin-top: 5%;
+    border-bottom: 1px solid rgba(242,255,250, 0.1);
+
+}
+
+.date-block {
+    display: inline-block;
+    position: relative;
+    width: auto;
+    background-color: #e9b51e;
+    padding: 8px;
+    vertical-align: top;
+    margin-right: 10%;
+}
+
+.date-block::before {
+    content: ' ';
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: -17px;
+    top: 0; 
+    border-top: 17px solid transparent;
+    border-bottom: 17px solid transparent;
+    border-left: 17px solid #e9b51e;
+}
+
+canvas {
+    display: inline-block;
+    width: 180px;
+    height: 90px;
+    margin-top: 5%;
+}
+
