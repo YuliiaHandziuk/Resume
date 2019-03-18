@@ -15,7 +15,7 @@ const experienceBlock = {
     }
 };
 
-
+let a;
 
 function initLineAndBlock(iconId,lineId,itemId) {
     let icon = document.getElementById(iconId);
